@@ -14,21 +14,13 @@
         <h1><a href="/">My Blog</a></h1>
     </div>
 
+    {% for post in posts %}
     <div>
-        <p>published: 14.06.2014, 12:14</p>
-        <h2><a href="">My first post</a></h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, eius. Velit similique quisquam soluta, omnis dolorum magni asperiores dignissimos magnam ea, temporibus optio eveniet, ad nisi vitae doloribus. Architecto ut, ducimus mollitia,
-            dolorum esse ipsa, aspernatur soluta ea quo est quis. Eaque quam iusto soluta sapiente odit ipsam suscipit id excepturi, incidunt dolorum sed laboriosam doloremque nam, nostrum magni quaerat fugit optio nisi sequi perferendis veniam labore
-            amet. Dolor voluptate provident cum tempore. Quasi impedit quaerat officiis eos repellat sequi?</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <p> publicado: {{ post.published_date }}</p>
     </div>
-
-    <div>
-        <p>published: 14.06.2014, 12:14</p>
-        <h2><a href="">My second post</a></h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio cum aliquid fuga in dolor labore quo at porro ratione eos, modi numquam facilis accusantium unde quaerat autem! Rem sit voluptatem, aliquam consectetur asperiores id cupiditate
-            voluptates praesentium nihil quasi velit natus porro delectus alias eaque ut fuga magni ducimus maiores vel architecto qui, possimus non? Est consequatur repudiandae dolore, eos nesciunt cupiditate quidem aliquam dolorum cum accusamus ut suscipit
-            similique vitae impedit sint dolor corrupti tempore accusantium repellendus, quaerat atque! Neque inventore nam quas, dolores numquam odio minus, corporis labore beatae voluptate omnis quia maxime excepturi aut ipsam? Ut, assumenda.</p>
-    </div>
+    {% endfor %}
 </body>
 
 </html>
